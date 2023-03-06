@@ -6,6 +6,7 @@ import "../styles/home.css"
 import Helmet from '../components/Helmet/Helmet'
 import heroImg from "../assets/images/hero-img.png"
 
+import Services from '../services/Services'
 const Home = () => {  
   
   const year = new Date().getFullYear()
@@ -36,6 +37,7 @@ const Home = () => {
         </Row>
       </Container>
     </section>
+    <Services />
   </Helmet>
 }
 
