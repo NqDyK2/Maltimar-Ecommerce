@@ -24,6 +24,10 @@
     font-weight: 500;
 }
 
+.price {
+    margin-left: 0.5rem;
+}
+
 .product__card-bottom span i {
     font-size: 1.2rem;
     padding: 5px;
