@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef, useEffect} from 'react'
 
 import { NavLink } from 'react-router-dom'
 import './header.css'
