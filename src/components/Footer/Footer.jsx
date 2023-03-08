@@ -11,7 +11,7 @@ const Footer = () => {
   return <footer className="footer">
     <Container>
       <Row>
-        <Col lg='4'>
+        <Col lg='4' className='mb-4' md='6'>
           <div className="logo">
             <div>
               <h1 className='text-white'>Multimart</h1>
@@ -22,7 +22,7 @@ const Footer = () => {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas quibusdam soluta, repudiandae itaque explicabo accusantium ex nam eum magni impedit tenetur corrupti mollitia facere atque consequatur, laborum sequi porro quaerat!
           </p>
         </Col>
-        <Col lg='3'>
+        <Col lg='3' md='3' className='mb-4'>
           <div className="footer__quick-links">
             <h4 className="quick__links-title">
               Top Categories
@@ -51,7 +51,7 @@ const Footer = () => {
             </ListGroup>
           </div>
         </Col>
-        <Col lg='2'>
+        <Col lg='2'md='3' className='mb-4'>
           <div className="footer__quick-links">
             <h4 className="quick__links-title">
               Top Categories
@@ -80,7 +80,7 @@ const Footer = () => {
             </ListGroup>
           </div>
         </Col>
-        <Col lg='3'>
+        <Col lg='3' md='4'>
           <div className="footer__quick-links">
             <h4 className="quick__links-title">
               Contact
