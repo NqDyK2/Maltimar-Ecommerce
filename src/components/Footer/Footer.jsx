@@ -17,10 +17,10 @@ const Footer = () => {
               <h1 className='text-white'>Multimart</h1>
               {/* <p>Since 1995</p> */}
             </div>
-            <p className="footer__text mt-4">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas quibusdam soluta, repudiandae itaque explicabo accusantium ex nam eum magni impedit tenetur corrupti mollitia facere atque consequatur, laborum sequi porro quaerat!
-            </p>
           </div>
+          <p className="footer__text mt-4">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas quibusdam soluta, repudiandae itaque explicabo accusantium ex nam eum magni impedit tenetur corrupti mollitia facere atque consequatur, laborum sequi porro quaerat!
+          </p>
         </Col>
         <Col lg='3'>
           <div className="footer__quick-links">
@@ -85,16 +85,16 @@ const Footer = () => {
             <h4 className="quick__links-title">
               Contact
             </h4>
-            <ListGroup>
-              <ListGroupItem className='ps-0 border-0'>
+            <ListGroup className='footer__contact'>
+              <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                 <span><i class="ri-map-pin-line"></i></span>
                 <p>25 Văn Trì, Minh Khai, Bắc Từ Liêm, Hà Nội</p>
               </ListGroupItem>
-              <ListGroupItem className='ps-0 border-0'>
+              <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                 <span><i class="ri-phone-line"></i></span>
                 <p>+0373997970</p>
               </ListGroupItem>
-              <ListGroupItem className='ps-0 border-0'>
+              <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
                 <span><i class="ri-mail-line"></i></span>
                 <p>nqdy0110@gmail.com</p>
               </ListGroupItem>

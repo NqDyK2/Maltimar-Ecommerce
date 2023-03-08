@@ -18,12 +18,12 @@
 }
 
 .quick__links-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: snow;
     font-size: 1.1rem;
 }
 
-.footer__contact li span, ..footer__contact li p{
+.footer__contact li span, .footer__contact li p{
     color: rgba(255, 255, 255, 0.735);
 }
 
