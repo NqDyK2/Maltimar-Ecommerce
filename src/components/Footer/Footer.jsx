@@ -87,15 +87,15 @@ const Footer = () => {
             </h4>
             <ListGroup className='footer__contact'>
               <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
-                <span><i class="ri-map-pin-line"></i></span>
+                <span><i className="ri-map-pin-line"></i></span>
                 <p>25 Văn Trì, Minh Khai, Bắc Từ Liêm, Hà Nội</p>
               </ListGroupItem>
               <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
-                <span><i class="ri-phone-line"></i></span>
+                <span><i className="ri-phone-line"></i></span>
                 <p>+0373997970</p>
               </ListGroupItem>
               <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
-                <span><i class="ri-mail-line"></i></span>
+                <span><i className="ri-mail-line"></i></span>
                 <p>nqdy0110@gmail.com</p>
               </ListGroupItem>
             </ListGroup>
