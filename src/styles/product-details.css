@@ -25,6 +25,7 @@
     color: var(--primary-color);
     font-weight: 500;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .active__tab { 
@@ -77,4 +78,11 @@
     column-gap: 5px;
     font-weight: 600;
     color: coral;
+    cursor: pointer;
+}
+
+.related__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 30px;
 }
