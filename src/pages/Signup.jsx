@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Helmet from '../components/Helmet/Helmet';
 import { Container, Row, Col, Form, FormGroup } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage"
 import { setDoc, doc } from 'firebase/firestore';
@@ -18,13 +18,12 @@ const Signup = () => {
   const [username, setUsername] = useState('')
   const [file, setFile] = useState(null)
   const [loading, setLoading] = useState(false)
-
+  const navigate = useNavigate()
   const signup = async (e) => {
     e.preventDefault()
     setLoading(true);
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password)
-
       const user = userCredential.user
       const storageRef = ref(storage, `images/${Date.now() + username}`)
       const uploadTask = uploadBytesResumable(storageRef, file)
@@ -38,7 +37,6 @@ const Signup = () => {
             displayName: username,
             photoURL: downloadURL,
           });
-
           //store user data in firestore database 
           await setDoc(doc(db, 'users', user.uid), {
             uid: user.uid,
@@ -49,19 +47,20 @@ const Signup = () => {
 
         });
       });
-
-      console.log(user);
+      setLoading(false)
+      toast.success('Account created!!')
+      navigate('/login')
     } catch (err) {
       toast.error('Something went wrong')
     }
-
   }
 
   return <Helmet title='Registation'>
     <section>
       <Container>
         <Row>
-          <Col lg='6' className='m-auto text-center'>
+          {
+            loading ? (<Col lg='12' className='text-center'> <h5  className="fw-bold"> Loading....</h5>  </Col>) : (<Col lg='6' className='m-auto text-center'>
             <h3 className="fw-bold mb-4"> Register </h3>
 
             <Form className='auth__form' onSubmit={signup}>
@@ -88,7 +87,8 @@ const Signup = () => {
                 Already have an account?{" "}
                 <Link to='/login'>Login</Link></p>
             </Form>
-          </Col>
+          </Col>)
+          }
         </Row>
       </Container>
     </section>
