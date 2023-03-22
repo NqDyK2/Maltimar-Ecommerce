@@ -90,7 +90,7 @@
 
 .nav__icons .profile .profile__actions {
     position: absolute;
-    top: 98%;
+    top: 103%;
     left: 0;
     width: 150px;
     z-index: 10;
@@ -105,7 +105,7 @@
 }
 
 .show__profileActions {
-    display: block;
+    display: block !important;
 }
 
 .mobile__menu {
