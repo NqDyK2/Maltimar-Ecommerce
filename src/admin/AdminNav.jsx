@@ -52,12 +52,16 @@ const AdminNav = () => {
                 </div>
             </header>
 
-        <section className="admin__menu">
+        <section className="admin__menu p-0">
             <Container>
                 <Row>
                     <div className="admin__navigation">
                         <ul className="admin__menu-list">
-                            {admin__nav}
+                            {admin__nav.map((item,index) => (
+                                <li className="admin__menu-item" key={index}>
+                                    <NavLink to={item.path} className={navClass => navClass.isActive ? 'active__admin-menu' : ''} >{item.display}</NavLink>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </Row>
